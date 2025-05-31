@@ -8,16 +8,16 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
+import { CldImage } from 'next-cloudinary';
+
 const metadata = {
-  title: 'Personal Homepage Demo',
+  title: 'Personal Homepage',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
     <Header
       links={[
@@ -25,13 +25,12 @@ const metadata = {
         { text: 'About', href: '#about' },
         { text: 'Resume', href: '#resume' },
         { text: 'Porfolio', href: '#porfolio' },
-        { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/onwidget' },
+        { text: 'Github', href: 'https://github.com/harleycosio' },
       ]}
       actions={[
         {
           text: 'Hire me',
-          href: '#',
+          href: getPermalink('/contact#form'),
         },
       ]}
       isSticky
@@ -43,13 +42,13 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
+    title="I'm Harley"
+    tagline="Personal Livesite"
     actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
-      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
+      A Frontend Developer passionate about creating engaging web experiences. <br /> With more than 8 years of experience and
+      a Bachelor's Degree in Computer Science. I infuse vitality into brands and designs, transforming concepts into captivating
       realities.
     </Fragment>
   </Hero>
@@ -61,33 +60,33 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:brand-linkedin',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
-          href: '#',
+          text: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/harley-cruz-736388368',
         },
       },
       {
-        icon: 'tabler:brand-behance',
+        icon: 'tabler:brand-github',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
-          href: '#',
+          text: 'Github',
+          href: 'https://github.com/harleycosio',
         },
       },
       {
-        icon: 'tabler:brand-pinterest',
+        icon: 'tabler:brand-reddit',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
-          href: '#',
+          text: 'Reddit',
+          href: 'https://www.reddit.com/user/Existing_Dependent_8/',
         },
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Colorful Image',
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1748726481/profile_image.png',
+      alt: 'Personal profile picture of me',
       loading: 'eager',
     }}
   >
@@ -348,7 +347,7 @@ const metadata = {
         },
       },
       {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
+        testimonial: `We entrusted Harley with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
         name: 'Alex Foster',
         job: 'Director of web services',
         image: {
@@ -366,7 +365,7 @@ const metadata = {
         },
       },
       {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
+        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Harley's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
         name: 'Michael Carter',
         job: 'Event Coordinator',
         image: {
@@ -390,16 +389,4 @@ const metadata = {
       },
     ]}
   />
-
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id="blog"
-    title="Explore my insightful articles on my blog"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
 </Layout>
