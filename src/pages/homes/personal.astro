@@ -10,7 +10,6 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import { getPermalink } from '~/utils/permalinks';
 
-import { CldImage } from 'next-cloudinary';
 
 const metadata = {
   title: 'Personal Homepage',
@@ -118,14 +117,20 @@ const metadata = {
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+          'Senior Frontend Developer <br /> <span class="font-normal">Experis, Florida</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+        description: `Led frontend development initiatives and mentored junior developers. <br /> 
+          Rewrote and modernized an internal management web application using NextJS, TypeScript, and Tailwind CSS. <br /> 
+          Optimized application performance and implemented best practices for accessibility and SEO. <br /> 
+          Enhanced team productivity by developing intuitive interfaces for complex management workflows.`,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Frontend Developer <br /> <span class="font-normal">Teleperformance USA, Boca Raton, FL</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: `Developed and maintained customer-facing web applications using JavaScript, HTML5, and CSS3. <br /> 
+          Implemented responsive designs and cross-browser compatibility solutions. <br /> 
+          Collaborated with backend teams to integrate RESTful APIs and optimize data flow. <br /> 
+          Participated in agile development cycles and contributed to technical documentation.`,
         icon: 'tabler:briefcase',
       },
     ]}
@@ -139,11 +144,11 @@ const metadata = {
     title="Education"
     items={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        title: `Master of Science in Applied Computing <br /> <span class="font-normal">University of Camaguey, Cuba</span> <br /> <span class="text-sm font-normal">2011 - 2012</span>`,
         icon: 'tabler:school',
       },
       {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        title: `Bachelor's Degree in Computer Science <br /> <span class="font-normal">University of Havana</span> <br /> <span class="text-sm font-normal">2003 - 2009</span>`,
         icon: 'tabler:school',
       },
     ]}
